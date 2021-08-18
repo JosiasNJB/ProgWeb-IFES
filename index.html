@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aumentar e diminuir fonte</title>
+
+        <style type="text/css">
+
+            button {
+                font-size: x-large;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1>Alterar o tamanho do título com JavaScript</h1>
+
+        <div>
+            <button id="decrease">-</button>
+            <button id="increase">+</button>
+        </div>
+
+        <script type="text/javascript">
+            window.onload = function() {
+                var elementBody = document.querySelector('body');
+                var ButtonDecrease = document.getElementById('decrease');
+                var ButtonIncrease = document.getElementById('increase');
+                var fontSize = 100;
+                var increaseDecrease = 10;
+
+                ButtonIncrease.addEventListener('click', function(event) {
+                    fontSize = fontSize + increaseDecrease;
+                    elementBody.style.fontSize = fontSize + '%';
+                });
+
+                ButtonDecrease.addEventListener('click', function(event) {
+                    fontSize = fontSize - increaseDecrease;
+                    elementBody.style.fontSize = fontSize + '%';
+                });
+            }
+        </script>
+
+    </body>
+</html>
